@@ -1,0 +1,278 @@
+:root {
+	--color-principal: rgb(255, 83, 15);
+    --color-segundario: rgb(255, 145, 0);
+}
+
+body {
+    background-color: #777;
+}
+
+/*
+Estilos de Navbar para aplicar en nav1.tsx
+*/
+.Nav {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    background-image: linear-gradient(to right, var(--color-segundario) -50%, var(--color-principal) 50%, var(--color-segundario) 150%);
+    width: 100%;
+}
+
+.Nav-nav {
+    margin-bottom: 0px;
+}
+
+.nav-div-content{
+    display: grid;
+    justify-content: center;
+}
+
+.nav-div-content-ul {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.ul-nav__item {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.ul-nav__item a {
+    padding: 2px 5px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 10%;
+    transition-property: all;
+    transition-duration: 0.5s;
+
+}
+
+.ul-nav__item a:hover{
+    background-color: #000;
+    color: var(--color-principal);
+    padding: 5px 20px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+/*
+    Estilos de Home para aplicar en home.tsx
+*/
+.Home-body {
+    height: 100vh;
+    background-image: url("../public/img/fondo3.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.3;
+}
+
+.Home h5 {
+    position: absolute;
+    top: 300px;
+    left: 180px;
+    width: 1000px;
+}
+
+/*
+    Estilos de Donde para aplicar en donde.tsx
+*/
+.Donde-body{
+    height: 100vh;
+    background-image: url("../public/img/fondo3.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.3;
+}
+
+.Donde-content {
+    position: absolute;
+    top: 70px;
+    left: 400px;
+}
+
+.Donde-content div{
+    display: grid;
+    justify-content: center;
+    background-color: #aaa;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.Donde-content div h1 {
+    justify-self: center;
+}
+
+/*
+    Estilos para Productos y CardProductos
+*/
+
+.Productos {
+    background-color:  rgb(240, 180, 102);    
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 300px;
+    justify-items: center;
+    grid-row-gap: 15px;
+}
+
+.Productos .grilla h2 {
+    padding-top: 5px;
+    justify-self: center;
+    grid-column: 1 / span 2;
+}
+
+.CardProducto {
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 650px;
+    height: 300px;
+    background-color: #FFF;
+}
+
+.CardProducto:hover {
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+.CardProducto .Card-Content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.card-imagen-content {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    margin: 5px;
+    width: 90%;
+    height: 280px;
+}
+
+.card-imagen {
+    width: 280px;
+    height: 280px;
+}
+
+.buttom-imagen {
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+}
+
+.card-datos {
+    grid-column: 2 / span 1;
+    padding: 5px;
+}
+
+.card-titulo {
+    font-size: 20px;
+}
+
+.card-envioGratis {
+    color: rgb(0, 209, 0);
+    padding-top: 10px;
+}
+
+.imagen-camion {
+    width: 40px;
+    height: 30px;
+}
+
+.card-envioCosto {
+    color: var(--color-segundario);
+}
+
+/*
+    Estilos para Detalle y CardDetalle
+*/
+
+.Detalle {
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(240, 180, 102);
+}
+
+.det-content {
+    background-color: #FFF;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    box-shadow: 0 0 20px var(--color-principal);
+    border-radius: 20px;
+}
+
+.det-col1-content {
+    border-right: 2px solid #bbb;
+    padding: 10px;
+    grid-column: 1/ span 1;
+    box-shadow: 15px 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.imagen-content {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.imagen-det {
+    width: 400px;
+    height: 400px;
+    
+}
+
+.det-col2-content {
+    padding: 15px;
+    grid-column: 2 / span 1;
+}
+
+.det-cantVentas {
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.det-precio {
+    font-size: 50px;
+}
+
+.det-marca {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.det-modelo{
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.det-costo {
+    margin: 0;
+    margin-top: 20px;
+}
+
+.det-buttom-carrito {
+    padding: 10px 15px;
+    color: rgb(21, 149, 253);
+    border: 2px solid rgb(21, 149, 253);
+    border-radius: 10px;
+    display: grid;
+    margin-top: 130px;
+}
+
+.det-buttom-carrito:hover {
+    color: #fff;
+    background-color: rgb(21, 149, 253);
+}
+
+.label-descripcion {
+    font-weight: 700;
+}

@@ -10,10 +10,12 @@ function Productos() {
     return (
         <div className="Productos">
             <Nav></Nav>
-            <h1>Productos</h1>
+            <div className='grilla'>
+            <h2>Nuestros productos</h2>
             {instrumentos.map((instrumento: Instrumento) => (
                 CardProducto(instrumento)
             ))}
+            </div>
         </div>
     );
 }
