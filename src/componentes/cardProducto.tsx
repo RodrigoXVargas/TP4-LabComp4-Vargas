@@ -2,10 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Instrumento } from '../entidades/Instrumento';
 
 export const envio = (instrument: Instrumento) => {
-    if (instrument.costoEnvio === "G") {
+    if (instrument.costo_envio === "G") {
         return (<h6 className="card-envioGratis"><img className="imagen-camion" src={process.env.PUBLIC_URL + '/img/camion.png'} />Envío gratis a todo el país</h6>)
     } else {
-        return (<h6 className="card-envioCosto">Costo de envio Interior de Argentina ${instrument.costoEnvio}</h6>)
+        return (<h6 className="card-envioCosto">Costo de envio Interior de Argentina ${instrument.costo_envio}</h6>)
     }
 }
 
@@ -22,7 +22,7 @@ function CardProducto(instrumento: Instrumento) {
                     <p className="card-titulo">{instrumento.instrumento}</p>
                     <h3 className="card-precio">$ {instrumento.precio}</h3>
                     {envio(instrumento)}
-                    <p className="card-cantVentas">{instrumento.cantidadVendida} vendidos</p>
+                    <p className="card-cantVentas">{instrumento.cantidad_vendida} vendidos</p>
                 </div>
             </div>
         </div>

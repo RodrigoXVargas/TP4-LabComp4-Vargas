@@ -5,7 +5,7 @@ export interface Instrumento {
     "modelo": string,
     "imagen": string,
     "precio": string,
-    "costoEnvio": string,
-    "cantidadVendida": string,
+    "costo_envio": string,
+    "cantidad_vendida": string,
     "descripcion": string
   }

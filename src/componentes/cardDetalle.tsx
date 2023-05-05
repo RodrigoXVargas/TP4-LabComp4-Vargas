@@ -17,7 +17,7 @@ function DetalleInst(instrumento: Instrumento) {
                 </div>
                 <div className="det-col2-content">
                     <div className="det-datos-content">
-                        <p className="det-cantVentas">{instrumento.cantidadVendida} vendidos</p>
+                        <p className="det-cantVentas">{instrumento.cantidad_vendida} vendidos</p>
                         <h4 className="det-titulo">{instrumento.instrumento}</h4>
                         <p className="det-precio">$ {instrumento.precio}</p>
                         <p className="det-marca">Marca: {instrumento.marca}</p>

@@ -1,12 +1,22 @@
 import Nav from '../componentes/nav1';
 import "bootstrap/dist/css/bootstrap.min.css";
 import CardProducto from '../componentes/cardProducto';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import data from '../accesorios/db/instrumentos.json';
 import { Instrumento } from '../entidades/Instrumento';
+import { getAllInstrumentos } from '../componentes/FuncionesApi';
 
 function Productos() {
-    const [instrumentos, setInstrument] = useState<Array<Instrumento>>(data.instrumentos)
+    const [instrumentos, setInstrument] = useState<Instrumento[]>([]);
+    const getInstrumentos =async () => {
+        let datos: Instrumento[] = await getAllInstrumentos();
+        setInstrument(datos);
+    }
+
+    useEffect(()=>{
+        getInstrumentos();
+    }, []);
+
     return (
         <div className="Productos">
             <Nav></Nav>
