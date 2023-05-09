@@ -2,7 +2,7 @@ import { Instrumento } from "../entidades/Instrumento";
 
 
 export async function getAllInstrumentos() {
-    let urlServer = "http://localhost:8080/api/instrumentos";
+    let urlServer = "http://localhost:8080/api/instrumentos/getAll";
     let response = await fetch(urlServer, {
         method: 'GET',
         headers: {
