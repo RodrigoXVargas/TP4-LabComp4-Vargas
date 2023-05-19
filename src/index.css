@@ -75,6 +75,7 @@ Estilos de Navbar para aplicar en nav1.tsx
     top: 300px;
     left: 180px;
     width: 1000px;
+    font-size: 2em;
 }
 
 /*
@@ -110,7 +111,7 @@ Estilos de Navbar para aplicar en nav1.tsx
 */
 
 .Productos {
-    background-color:  rgb(240, 180, 102);    
+    background-color:  rgba(255, 145, 0, 0.795);   
 }
 
 .grilla {

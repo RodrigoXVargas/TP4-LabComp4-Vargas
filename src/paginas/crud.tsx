@@ -1,7 +1,7 @@
 import Nav from '../componentes/nav1';
 import {useEffect, useState } from 'react';
 import { Instrumento } from '../entidades/Instrumento';
-import { deleteInstrumentoById, getAllInstrumentos, saveInstrument } from '../componentes/FuncionesApi';
+import { deleteInstrumentoById, getAllInstrumentos } from '../componentes/FuncionesApi';
 import FormCrudPage from '../componentes/formCrudPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EliminarForm from '../componentes/EliminarForm';
@@ -26,12 +26,14 @@ const CRUD: React.FC = () => {
   
   const getInstrumentos =async () => {
     let datos: Instrumento[] = await getAllInstrumentos();
+
     setInstrument(datos);
   }
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [instrumentoSeleccionado, setInstrumentoSeleccionado] = useState<Instrumento | undefined>(undefined);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleOpenModal = (instrumento?: Instrumento) => {
     setIsModalOpen(true);
@@ -71,11 +73,22 @@ const CRUD: React.FC = () => {
     getInstrumentos();
   }, []);
 
+  const filteredInstrumentos = instrumentos.filter((instrumento) => {
+    return (
+      instrumento.instrumento.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      instrumento.marca.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      instrumento.modelo.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    );
+  });
+
   return (
       <div className="CRUD">
           <Nav></Nav>
           <div className='cuerpo'>
+          <div className='nav_table'>
           <button className='btn btn-primary' id="btn-agregar" onClick={() => handleOpenModal()}>Agregar Instrumento</button>
+          <input type="text" className='input-buscar' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder='Buscar' />
+          </div>
           <div className='table-responsive'>
               <table className="table table-dark table-hover table-sm align-middle">
               
@@ -93,7 +106,7 @@ const CRUD: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody className="">
-                  {instrumentos.map((instrumento: Instrumento, index) => (
+                  {filteredInstrumentos.map((instrumento: Instrumento, index) => (
                       <tr key={instrumento.id} className="RowInstrumento">
                           <th >{instrumento.id}</th>
                           <td>{modificarCadena(instrumento.instrumento)}</td>

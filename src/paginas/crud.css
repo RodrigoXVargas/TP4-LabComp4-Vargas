@@ -3,9 +3,12 @@
     --color-segundario: rgb(255, 145, 0);
 }
 
+.CRUD {
+    background-color: rgba(255, 145, 0, 0.795);
+}
+
 .cuerpo {
     padding: 10px;
-    background-color: var(--color-segundario)
     
 }
 
@@ -27,7 +30,27 @@ button:hover {
 }
 
 #btn-agregar {
-    text-align: end;
+    margin: 0;
+    text-align: center;
+    width: 180px;
+    height: 40px;
+}
+#btn-agregar:hover {
+    padding: 0;
+    width: 200px;
+    height: 45px;
+}
+
+.nav_table {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.input-buscar {
+    height: 35px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .modal-delete {
