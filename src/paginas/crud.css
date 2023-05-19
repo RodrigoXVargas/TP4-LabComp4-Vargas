@@ -48,7 +48,6 @@ button:hover {
 .modal-dialog {
     width: 460px;
     height: 150px;
-    border: 2px solid black;
     color: #fff;
     background-color: #333;
     padding: 10px;
@@ -69,7 +68,6 @@ button:hover {
 .form-container {
     width: 500px;
     height: 560px;
-    border: 2px solid black;
     color: #fff;
     background-color: #333;
     padding: 20px;
