@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Instrumento } from '../entidades/Instrumento';
 
 export const envio = (instrument: Instrumento) => {
@@ -10,7 +10,7 @@ export const envio = (instrument: Instrumento) => {
 }
 
 function CardProducto(instrumento: Instrumento) {
-    let urlImg: string = "img/"+ instrumento.imagen
+    let urlImg = /^nro/.test(instrumento.imagen) ? "../img/" + instrumento.imagen : instrumento.imagen;
   return (
     <div className="CardProducto">
         <div className="Card-Content">

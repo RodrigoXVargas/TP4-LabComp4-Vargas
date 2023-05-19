@@ -7,6 +7,10 @@ import Productos from './paginas/productos'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detalle from './paginas/detalleProd';
+import CRUD from './paginas/crud';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 
 const root = ReactDOM.createRoot(
@@ -19,6 +23,7 @@ root.render(
           <Route path="/" element={<App/>}/>
           <Route path="/donde" element={<Donde/>}/>
           <Route path="/productos" element={<Productos/>}/>
+          <Route path="/crud" element={<CRUD/>}/>
           <Route path="/test" element={<h1>TEST</h1>}/>
           <Route path="/productos/:id" element={<Detalle/>} />
           <Route path="*" element={<App/>}/>

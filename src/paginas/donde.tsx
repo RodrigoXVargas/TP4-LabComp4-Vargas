@@ -1,6 +1,5 @@
 import Nav from '../componentes/nav1';
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Donde() {
 

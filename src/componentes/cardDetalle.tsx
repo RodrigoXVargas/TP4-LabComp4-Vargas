@@ -1,10 +1,10 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Instrumento } from '../entidades/Instrumento';
 import { envio } from "./cardProducto";
 
 
 function DetalleInst(instrumento: Instrumento) {
-    let urlImg: string = "../img/"+ instrumento.imagen
+    let urlImg = /^nro/.test(instrumento.imagen) ? "../img/" + instrumento.imagen : instrumento.imagen;
     return (
         <div className="Detalle">
             <div className="det-content">

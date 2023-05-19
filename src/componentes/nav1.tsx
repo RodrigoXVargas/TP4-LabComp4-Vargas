@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Nav() {
 
@@ -15,6 +15,9 @@ function Nav() {
             </li>
             <li className="ul-nav__item">
               <a className="nav__buttom" onClick={event => window.location.href = 'http://localhost:3000/productos'}>Productos</a>
+            </li>
+            <li className="ul-nav__item">
+              <a className="nav__buttom" onClick={event => window.location.href = 'http://localhost:3000/crud'}>CRUD</a>
             </li>
           </ul>
         </div>
